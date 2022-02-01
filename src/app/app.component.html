@@ -1,9 +1,69 @@
-<h1>{{title}}</h1>
-<form>
-  Número 1: <input type="number" [(ngModel)]="numero1" name="numero1"><br><br>
-  Número 2: <input type="number" [(ngModel)]="numero2" name="numero2"><br><br>
-  <input type="submit" value="Sumar" (click)="sumar()"> 
-  <input type="submit" value="Restar" (click)="restar()">         
-</form>
+<h1>{{ title }}</h1>
 
-<p>Resultado: {{resultado}}</p>
+<div class="container">
+    <form>
+        <fieldset>
+            <legend class="mb-3">
+                <div class="row mb-3 mt-5">
+                    <div class="col-md-2">
+                        <label for="num1">Número 1</label>
+                    </div>
+                    <div class="col-md-4">
+                        <input
+                            type="number"
+                            [(ngModel)]="numero1"
+                            name="numero1"
+                            id="num1"
+                            class="form-control form-control-sm"
+                            required
+                        />
+                    </div>
+                    <div class="col-md-6"></div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-2">
+                        <label for="num2">Número 2</label>
+                    </div>
+                    <div class="col-md-4">
+                        <input
+                            type="number"
+                            [(ngModel)]="numero2"
+                            name="numero2"
+                            id="num2"
+                            class="form-control form-control-sm"
+                            required
+                        />
+                    </div>
+                    <div class="col-md-6"></div>
+                </div>
+                <div class="row mb-5">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-1">
+                        <input
+                            type="submit"
+                            value="Sumar"
+                            (click)="sumar()"
+                            class="btn btn-primary"
+                        />
+                    </div>
+                    <div class="col-md-1">
+                        <input
+                            type="submit"
+                            value="Restar"
+                            (click)="restar()"
+                            class="btn btn-primary"
+                        />
+                    </div>
+                    <div class="col-md-8"></div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-2">
+                        <label for="res">Resultado</label>
+                    </div>
+                    <div class="col-md-4" id="res">{{ resultado }}</div>
+                    <div class="col-md-6"></div>
+                </div>
+            </legend>
+        </fieldset>
+    </form>
+</div>
